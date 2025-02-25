@@ -1,0 +1,406 @@
+<html>
+  <title>Siddflix</title>
+  <link rel="stylesheet" href="">
+<head>
+    <style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: "Netflix Sans", sans-serif;
+      }
+      html,body{
+        width: 100%;
+        height: 100%;
+        overflow-x:hidden ;
+        
+       
+      }
+      .page1{
+         height:100vh;
+         background-image:url(netflix-images/luxa.org-opacity-changed-._bg.jpg);
+      }
+      .netflix_logo{
+        position: relative;
+        top: 5vh;
+        left: 10vh;
+        width: 20vh;
+        height: 7vh;
+      }
+      .p1navbar{
+        display: flex;
+        justify-content: space-between;
+        height: 10vh;
+      }
+      .language{
+        position: relative;
+        left: 53vh;
+        top: 5vh;
+        height: 4vh;
+        width: 15vh;
+        background-color:white;
+        border: 1px solid white;
+        border-radius: 5px;
+        color: rgb(11, 11, 11);
+        text-align: center;
+      }
+      .signup{
+        height: 4vh;
+        position: relative;
+        right: 25vh;
+        width: 10vh;
+        top: 5vh;
+        background-color: rgb(231, 1, 1);
+        border-radius: 5px;
+        color: white;
+      }
+      .p1txt{
+        position: relative;
+        top: 15vh;
+        text-align: center;
+        color: white;
+      }
+      .l1txt{
+        display: block;
+        position: relative;
+        font-size: 70px;
+        font-family:sans-serif;
+        text-align: center;
+      }
+      .l2txt{
+        position: relative;
+        top: 2vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+      }
+      .l3txt{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 17px;
+        position: relative;
+        top: 5vh;
+      }
+      input[type="email"]{
+        height: 7vh;
+        width: 50vh;
+        border-radius: 7px;
+        position: relative;
+        top: 8vh;
+        color: rgb(255, 255, 255);
+        border: 0.5px solid white;
+        background-color: transparent;
+        font-size: 25px;
+      }
+      .strtbtn{
+        height: 7vh;
+        border-radius: 7px;
+        width: 25vh;
+        background-color: rgb(255, 68, 0);
+        position: relative;
+        top: 8vh;
+        color: white;
+        font-size: 25px;
+      }
+      .page2{
+         height:120vh;
+         background-color: black;
+      }  
+      .p2navbar{
+        position: relative;
+        left: 15vh;
+      }
+      #trendingtxt{
+        color: white;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .country{
+        text-align: center;
+        width: 15vh;
+        height: 5vh;
+        background-color: black;
+        color: rgb(255,255,255,0.7);
+        border: 1px solid white;
+        border-radius: 8px;
+        border-radius: 5px;
+        position: relative;
+        top: 2vh;
+      }
+      .genre{
+        text-align: center;
+        width: 18vh;
+        height: 5vh;
+        background-color: black;
+        color: rgb(255,255,255,0.7);
+        border: 1px solid white;
+        border-radius: 8px;
+        border-radius: 5px;
+        position: relative;
+        top: 2vh;
+      }
+      .moviescart{
+        display:flex;
+        gap: 30px;
+        position: relative;
+        top: 5vh;
+        left: 20vh;
+        overflow: hidden;
+        
+      }
+      .moviescart img{
+        width: 30vh;
+        height: 38vh;
+        border-radius: 7%;
+      }
+      .p2txt{
+        color: white;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .cart1{
+        text-align: center;
+        width: 40vh;
+        height: 35vh;
+        background-color: darkblue;
+        border-radius: 10px;
+      }
+      .page2-reason{
+        position: relative;
+        left: 20vh;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        top: 10vh;
+        color: white;
+      }
+      .reasoncart{
+        position: relative;
+        top: 5vh;
+        display: flex;
+        gap: 30px;
+      }
+      .cart2{
+        text-align: center;
+        width: 40vh;
+        height: 35vh;
+        background-color: darkblue;
+        border-radius: 10px;
+      }
+      .reasoncart .cart-content{
+        position: relative;
+        top: 5vh;
+      }
+      .cart-content #c2{
+        position: relative;
+        top: 3vh;
+      }
+      .cart3{
+        text-align: center;
+        width: 40vh;
+        height: 35vh;
+        background-color: darkblue;
+        border-radius: 10px;
+      }
+      .cart4{
+        text-align: center;
+        width: 40vh;
+        height: 35vh;
+        background-color: darkblue;
+        border-radius: 10px;
+      }
+      .page3{
+        height: 80vh;
+        background-color: black;
+        color: white;
+      }
+      .page3 h2{
+        position: relative;
+        left: 17vh;
+        font-size: 30px;
+      }
+      .page4{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 80vh;
+        color: white;
+        background-color: black;
+      }
+      .faq{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 5vh;
+        position: relative;
+        left: 18vh;
+      }
+      #q1{
+        text-align:center;
+        background-color: grey;
+        height: 7vh;
+        text-align: start;
+        width: 75%;
+        font-size: 25px;
+        padding: 10px 10px;
+        
+      }
+      .faq p{
+        position: relative;
+        top: 2vh;
+      }
+      .p4navbar{
+        text-align: center;
+      }
+      .footer{
+        color: rgb(255,255,255,0.7);
+        position: relative;
+        top: 20vh;
+        left: 10vh;
+      }
+      .qns{
+        position: relative;
+        top: 5vh;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 15px;
+      }
+      .qns a{
+        text-decoration-line: underline;
+      }
+      .language2{
+        position: relative;
+        top: 13vh;
+        height: 5vh;
+        width: 15vh;
+        text-align: center;
+        background-color: black;
+        color: rgb(255,255,255,0.7);
+        border: 1px solid white;
+        border-radius: 8px;
+      }
+      .footer #txt2{
+        position: relative;
+        top: 20vh;
+      }
+      .page-2{
+        position: relative;
+        top: 5vh;
+      }
+      </style>
+</head>
+<body>
+  
+  <div class="page1">
+    <div class="p1navbar">
+      <img src="netflix-images\logo.png" alt="Netflix Logo" class="netflix_logo" />
+        <select class="language">
+          <option>English</option>
+          <option>हिन्दी</option>
+        </select>
+    <button class="signup">Sign up</button>
+  </div>
+  <div class="p1txt">
+    <h1 class="l1txt">Unlimited movies, <br>TV shows and <br>more</h1>
+    <p class="l2txt">Starts at ₹149. Cancel at any time.</p>
+    <p class="l3txt">Ready to watch? Enter your email to create or restart your membership</p>
+    <input type="email" placeholder="Email address">
+    <button class="strtbtn">Get Started ></button>
+  </div>
+  </div>
+  <div class="page2">
+    <div class="page-2">
+      <div class="p2navbar">
+      <h3 id="Trendingtxt">Trending Now</h3>
+      <select class="country">
+        <option>India</option>
+        <option>Global</option>
+      </select>
+      <select class="genre">
+        <option>Movies</option>
+        <option>Tv Shows</option>
+      </select>
+      </div>
+    <div class="moviescart">
+      <img src="netflix-images\image1.jpeg">
+      <img src="netflix-images\image2.jpeg">
+      <img src="netflix-images\image3.jpeg">
+      <img src="netflix-images\image4.jpeg">
+      <img src="netflix-images\image5.jpeg">
+     </div>
+    <div class="page2-reason">
+      <p id="p2txt" style="font-size: 50px;"></p>More reasons to join</p>
+      <div class="reasoncart">
+        <div class="cart1">
+          <div class="cart-content">
+          <p>Enjoy on your TV</p>
+          <p id="c2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>
+        </div>
+        <div class="cart2">
+          <div class="cart-content">
+            <p>Download Your Shows to watch offline</p>
+            <p id="c2">Save your favourites easily and always have something to watch</p>
+          </div>
+        </div>
+        <div class="cart3">
+          <div class="cart-content">
+            <p>Watch everywhere</p>
+            <p id="c2">Stream unlimited movies and TV shows on your phone,tablet,laptop and TV</p>
+          </div>
+        </div>
+        <div class="cart4">
+          <div class="cart-content">
+            <p>Create profiles for kids</p>
+            <p id="c2">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="page3">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+    <p id="q1">What is Netflix?</p>
+    <p id="q1">How much does Netflix cost?</p> 
+    <p id="q1" style="padding: 10px 10px;">Where can i watch?</p> 
+    <p id="q1">How do i cancel?</p> 
+    <p id="q1">What can i watch on Netflix?</p> 
+    <p id="q1">Is Netflix good for kids?</p>
+    </div>  
+  </div>
+  <div class="page4">
+    <div class="p4navbar">
+    <p style="font-size: 20px;">Ready to watch? Enter your email to create or restart your membership.</p>
+    <input type="email" placeholder="Enter Email">
+    <button class="strtbtn">Get Started ></button>
+    </div>
+  <div class="footer">
+    <p>Questions? Call 000-800-919-1743</p>
+    <div class="qns">
+    <a>FAQ</a>
+    <a>Account</a>
+    <a>Investor Relations</a>
+    <a>Ways to Watc</a>
+    <a>Privacy</a>
+    <a>Corporate Information</a>
+    <a>Speed Test</a>
+    <a>Only on Netflix</a>
+    <a>Help Centre</a>
+    <a>Media Centre</a>
+    <a>Jobs</a>
+    <a>Terms of Use</a>
+    <a>Cookie Preferences</a>
+    <a>Contact Us</a>
+    <a >Legal Notices</a>
+    </div>
+    <select class="language2">
+      <option>English</option>
+      <option>हिन्दी</option>
+    </select>
+    <p id="txt2">Netflix India</p>
+  </div>
+  </div>
+</body>
+</html>
